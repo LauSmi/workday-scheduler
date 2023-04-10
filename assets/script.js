@@ -1,6 +1,3 @@
-//Code wrap that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 $(document).ready(function () {
   console.log('Get it done!');
 
@@ -28,23 +25,24 @@ $(document).ready(function () {
   });
 
   //Listener for click events on the save button.
-  $('.saveBtn').click(function (event) {
-    event.preventDefault();
-    let value = $(this).siblings('.time-block').val();
-    let time = $(this).parent().attr('id').split('-')[1];
-    localStorage.setItem(time, value);
+  $('.saveBtn').on('click', function (event) {
+    console.log(event.target);
+    var parentOfThingClickedOn = $(event.target).parent();
+    console.log(parentOfThingClickedOn);
+    var textSibling = parentOfThingClickedOn.children('textarea').val();
+    console.log(textSibling);
+    localStorage.setItem(parentOfThingClickedOn.attr('id'), textSibling);
   });
 
   //Code to get any user input that was saved in localStorage.
-  $('#hour-09 .time-block').val(localStorage.getItem('09'));
-  $('#hour-10 .time-block').val(localStorage.getItem('10'));
-  $('#hour-11 .time-block').val(localStorage.getItem('11'));
-  $('#hour-12 .time-block').val(localStorage.getItem('12'));
-  $('#hour-13 .time-block').val(localStorage.getItem('13'));
-  $('#hour-14 .time-block').val(localStorage.getItem('14'));
-  $('#hour-15 .time-block').val(localStorage.getItem('15'));
-  $('#hour-16 .time-block').val(localStorage.getItem('16'));
-  $('#hour-17 .time-block').val(localStorage.getItem('17'));
-
-  //let now = dayjs();
+  $('.time-div').each(function () {
+    let id = $(this).attr('id');
+    $(`#${id} .description`).val(localStorage.getItem(id));
+  });
 });
+
+// TEST-Set a value in local storage
+localStorage.setItem('test', 'hello world');
+
+// Retrieve the value from local storage and log it to the console
+console.log(localStorage.getItem('test')); // should output "hello world"
