@@ -4,18 +4,13 @@
 
 This was a refactoring project using code provided by the UofM Bootcamp Program. I refactored the code using day.js to create a simple work day scheduler that displays the current time and date. The hour blocks run from 9am to 5pm and each block has a save button that allows text to be saved to local storage. The blocks change colors to display past, present, and future times. I also changed the styling to make it more visually appealing.
 
+Link to website: https://lausmi.github.io/workday-scheduler/
 
-Link to website: https://lausmi.github.io//  
-
-Link to GitHub: https://github.com/LauSmi/
+Link to GitHub: https://github.com/LauSmi/workday-scheduler
 
 # Screenshot
 
-![Alt text](images/Screenshot%202023-03-30%20190635.png)
-
-![Alt text](images/Screenshot%202023-03-30%20190705.png)
-
-
+![Alt text](assets/images/Screenshot%202023-04-11%20160714.png)
 
 # Installation N/A
 
@@ -29,9 +24,11 @@ James Compagnoni- tutor;
 
 Lectures on Javascript and Third-Party APIs, UofM Coding Bootcamp;
 
-MDN Web Docs on Javascript and Third-Party APIs; https://developer.mozilla.org/en-US/
+https://developer.mozilla.org/en-US/ MDN Web Docs on Javascript and Third-Party APIs;
 
-https://github.com/ for doc review and code troubleshooting
+https://github.com/ for doc review and code troubleshooting;
+
+https://openai.com/ for troubleshooting;
 
 https://jQuery.com;
 
@@ -43,11 +40,9 @@ https://fonts.google.com;
 
 https://dayjs.com;
 
-https://stackoverflow.com for troubleshooting and questions on Javascript and jQuery functionalities.
+https://w3schools.com for references and tutorials;
 
-https://w3schools.com for Javascript and Third-Party APIs references and tutorials; and
-
-https://www.youtube.com for Javascript tutorials.
+https://www.youtube.com for Javascript tutorials;
 
 # License MIT License
 
